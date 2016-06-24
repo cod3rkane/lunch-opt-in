@@ -1,0 +1,13 @@
+{
+    "name": "stavarengo/lunch-opt-in",
+    "description": "Lunch opt-in",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Sta\\SnackOptIn\\": "src/SnackOptIn/"
+        }
+    },
+    "require": {
+        "php": "^5.5 || ^7.0"
+    }
+}
