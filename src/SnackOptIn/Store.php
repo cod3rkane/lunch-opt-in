@@ -90,7 +90,9 @@ class Store
     }
 
     public function addSchedule($email, Schedule $newSchedule)
-    {sldjfaçlkdf
+    {
+        
+    }
 
 //    public function toArray(array $items = null)
 //    {
