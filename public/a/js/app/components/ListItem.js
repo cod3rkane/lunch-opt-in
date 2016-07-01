@@ -112,7 +112,7 @@ define([
         },
 
         _onClickOptOut: function() {
-            Actions.createPersonSchedule(this.props.person.email, false);
+            Actions.createPersonSchedule(this.props.person.email, false, false, this.state.currDate);
             this._nextDate();
         },
 
