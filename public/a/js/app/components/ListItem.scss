@@ -1,3 +1,16 @@
 .a-c-list-item
 {
+  .full-width
+  {
+    width: 100%;
+  }
+
+  .schedule-btn-section
+  {
+    button
+    {
+      width: 50%;
+      margin: 0;
+    }
+  }
 }

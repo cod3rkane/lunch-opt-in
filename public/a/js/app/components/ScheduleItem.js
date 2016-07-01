@@ -22,17 +22,20 @@ define([
         render: function() {
             var schedule = this.props.schedule;
             return (
-                <div className="a-c-schedule-item">
+                <div className="a-c-schedule-item" onClick={this._onEditClickHandle}>
                     <div>
                         {schedule.date.getDate()}/{schedule.date.getMonth() + 1}/{schedule.date.getFullYear()}
-                                                 -
+                                                 <span> - </span>
                         {schedule.going ? ' going ' : ' not going '}
-                                                 -
+                                                <span> - </span>
                         {schedule.guests}
                     </div>
                 </div>
             );
         },
 
+        _onEditClickHandle: function (e) {
+            console.log("Open Edit Modal!");
+        },
     });
 });

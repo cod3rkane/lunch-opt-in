@@ -239,10 +239,19 @@ define([
          */
         getCurrPeople: function() {
             return _currPeople;
+        },
+
+        /**
+         *
+         * @param person
+         * @returns {*}
+         */
+        getNextScheduleDate: function (person) {
+            return _getNextScheduleDate(person);
         }
     });
 
-    Dispatcher.register(function(action) {
+    Store.dispatchToken = Dispatcher.register(function(action) {
         var payload = action.payload;
 
         switch (action.actionType) {

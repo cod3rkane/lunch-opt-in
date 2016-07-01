@@ -1,7 +1,6 @@
 define([
-    'flux',
+    'flux'
 ], function(flux) {
-    var Dispatcher = require('flux').Dispatcher;
+    var Dispatcher = flux.Dispatcher;
     return new Dispatcher();
 });
-
