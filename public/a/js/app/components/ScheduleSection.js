@@ -23,17 +23,18 @@ define([
         render: function() {
             var touchSeeMore = (this.props.schedule.size > 1);
             /* we are getting the smallest date in iterator */
-            var listItems = this.props.schedule.
-            valueSeq().
-            sortBy(x => x.date).
-            map(function(/*../entity/Schedule*/schedule) {
-                return (
-                    <ScheduleItem
-                        key={schedule.date.getTime()}
-                        schedule={schedule}
-                    />
-                );
-            }, this).first();
+            var listItems = this.props.schedule.valueSeq().sortBy(function (x) {
+                return x.date;
+            }).map(
+                function(/*../entity/Schedule*/schedule) {
+                    return (
+                        <ScheduleItem
+                            key={schedule.date.getTime()}
+                            schedule={schedule}
+                        />
+                    );
+                }
+            ).first();
 
             return (
                 <div className="a-c-schedule-section">
