@@ -3,7 +3,8 @@ define([
     './ListItem',
     'immutable',
     '../store/PersonStore',
-], function(React, ListItem, Immutable, PersonStore) {
+    './ScheduleModal'
+], function(React, ListItem, Immutable, PersonStore, ScheduleModal) {
 
     function getStateStore() {
         return {
@@ -45,6 +46,7 @@ define([
                 <div className="a-c-list_--_">
                     <div className="row">
                         {listItems}
+                        <ScheduleModal />
                     </div>
                 </div>
             )

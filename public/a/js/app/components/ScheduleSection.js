@@ -14,6 +14,7 @@ define([
     return React.createClass({
         propTypes: {
             schedule: React.PropTypes.instanceOf(Immutable.List([])),
+            first: React.PropTypes.bool
         },
 
         getDefaultProps: function() {
@@ -21,7 +22,6 @@ define([
         },
 
         render: function() {
-            var touchSeeMore = (this.props.schedule.size > 1);
             /* we are getting the smallest date in iterator */
             var listItems = this.props.schedule.valueSeq().sortBy(function (x) {
                 return x.date;
@@ -34,20 +34,17 @@ define([
                         />
                     );
                 }
-            ).first();
+            );
+
+            if (this.props.first) {
+                listItems = listItems.first();
+            }
 
             return (
                 <div className="a-c-schedule-section">
                     {listItems}
-                    <div className={"touch-smore text-xs-center " + touchSeeMore} onClick={this._onClickSeeMore}>
-                        <b>{__('Touch see more')}</b>
-                    </div>
                 </div>
             );
-        },
-
-        _onClickSeeMore: function(e) {
-            alert("Open Modal See More");
         },
     });
 });

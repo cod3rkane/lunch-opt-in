@@ -38,5 +38,14 @@ define([
                 },
             });
         },
+
+        openScheduleModal: function (person) {
+            Dispatcher.dispatch({
+                actionType: Constants.APP_OPEN_SCHEDULE_MODAL,
+                payload: {
+                    person: person,
+                },
+            });
+        },
     };
 });

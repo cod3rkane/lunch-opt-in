@@ -42,6 +42,8 @@ define([
                 domain = email.replace(/^.+?@/, '@')
             }
 
+            var touchSeeMore = (this.props.person.schedule.size > 1);
+
             return (
                 <div className="a-c-list-item">
                     <div className="col-xs-4">
@@ -56,7 +58,10 @@ define([
                                     <small className="text-muted">{domain}</small>
                                 </h4>
                                 <hr/>
-                                <ScheduleSection schedule={this.props.person.schedule} />
+                                <ScheduleSection schedule={this.props.person.schedule} first={true}/>
+                                <div className={"touch-smore text-xs-center " + touchSeeMore} onClick={this._onClickSeeMore}>
+                                    <b>{__('Touch see more')}</b>
+                                </div>
                             </div>
                             <div className="new-schedule text-xs-center">
                                 <p className="bq-title">{__("New Schedule")}</p>
@@ -159,6 +164,10 @@ define([
          */
         _getNextWorkDate: function (person) {
             return PersonStore.getNextScheduleDate(person);
+        },
+
+        _onClickSeeMore: function(e) {
+            Actions.openScheduleModal(this.props.person);
         },
     });
 });
