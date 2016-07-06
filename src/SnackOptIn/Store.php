@@ -136,6 +136,11 @@ class Store
         ErrorHandler::start();
         $sempahore = Semaphore::acquire(Semaphore::SEM_STORE_WRITE);
         try {
+            $dir = dirname($this->file);
+            if (!file_exists($dir)) {
+                mkdir($dir, 0777, true);
+            }
+            
             file_put_contents($this->file, serialize($this->items));
             ErrorHandler::stop(true);
             Semaphore::release($sempahore);
