@@ -272,6 +272,11 @@ define([
                 Store.emitChange();
                 break;
 
+            case Constants.APP_CHANGE_PEOPLE:
+                _setPeople(payload.people);
+                Store.emitChange();
+                break;
+
             default:
             // no op
         }

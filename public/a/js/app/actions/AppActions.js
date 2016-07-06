@@ -47,5 +47,14 @@ define([
                 },
             });
         },
+
+        changePeople: function (people) {
+            Dispatcher.dispatch({
+                actionType: Constants.APP_CHANGE_PEOPLE,
+                payload: {
+                    people: people,
+                },
+            });
+        },
     };
 });

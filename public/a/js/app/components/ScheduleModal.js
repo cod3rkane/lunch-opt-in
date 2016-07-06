@@ -4,10 +4,11 @@ define([
     '../actions/AppActions',
     './ScheduleSection',
     '../entity/ScheduleEntity',
+    '../store/PersonStore',
     'immutable',
     //---
     './ScheduleModal.scss'
-], function (React, ModalStore, AppActions, ScheduleSection, ScheduleEntity, Immutable) {
+], function (React, ModalStore, AppActions, ScheduleSection, ScheduleEntity, PersonStore, Immutable) {
 
     function getStateStore() {
         return {
@@ -98,7 +99,7 @@ define([
                             <div className="modal-footer">
                                 <button className="btn btn-secondary" data-dismiss="modal"
                                         onClick={this._onClickCancel}>{__("Cancel")}</button>
-                                <button className="btn btn-primary">{__("Save all change")}</button>
+                                <button className="btn btn-primary" onClick={this._onClickSave}>{__("Save all change")}</button>
                             </div>
                         </div>
                     </div>
@@ -175,6 +176,12 @@ define([
                 currEditSchedule: newSchedule,
                 person: newPerson
             });
+        },
+
+        _onClickSave: function (e) {
+            var people = PersonStore.getAll(),
+                newPeople = people.set(this.state.person.email.toUpperCase(), this.state.person);
+            AppActions.changePeople(newPeople);
         }
     })
 });
