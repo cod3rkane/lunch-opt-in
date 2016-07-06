@@ -14,7 +14,8 @@ define([
     return React.createClass({
         propTypes: {
             schedule: React.PropTypes.instanceOf(Immutable.List([])),
-            first: React.PropTypes.bool
+            first: React.PropTypes.bool,
+            onClickEdit: React.PropTypes.func
         },
 
         getDefaultProps: function() {
@@ -23,6 +24,7 @@ define([
 
         render: function() {
             /* we are getting the smallest date in iterator */
+            var me = this;
             var listItems = this.props.schedule.valueSeq().sortBy(function (x) {
                 return x.date;
             }).map(
@@ -31,6 +33,7 @@ define([
                         <ScheduleItem
                             key={schedule.date.getTime()}
                             schedule={schedule}
+                            onClickEdit={me.props.onClickEdit}
                         />
                     );
                 }

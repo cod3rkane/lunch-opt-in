@@ -2,6 +2,7 @@ define([
     'react',
     '../entity/ScheduleEntity',
     //----
+    './ScheduleItem.scss'
 ], function(React, Schedule) {
 
     var defaultProps = {
@@ -13,6 +14,7 @@ define([
 
         propTypes: {
             schedule: React.PropTypes.instanceOf(Schedule),
+            onClickEdit: React.PropTypes.func
         },
 
         getDefaultProps: function() {
@@ -34,8 +36,8 @@ define([
             );
         },
 
-        _onEditClickHandle: function (e) {
-            console.log("Open Edit Modal!");
+        _onEditClickHandle: function () {
+            this.props.onClickEdit && this.props.onClickEdit(this.props.schedule);
         },
     });
 });
