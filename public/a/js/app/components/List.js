@@ -3,8 +3,9 @@ define([
     './ListItem',
     'immutable',
     '../store/PersonStore',
-    './ScheduleModal'
-], function(React, ListItem, Immutable, PersonStore, ScheduleModal) {
+    './ScheduleModal',
+    '../actions/AppActions'
+], function(React, ListItem, Immutable, PersonStore, ScheduleModal, Actions) {
 
     function getStateStore() {
         return {
@@ -25,6 +26,7 @@ define([
 
         componentDidMount: function() {
             PersonStore.addChangeListener(this._onChange);
+            Actions.loadItems();
         },
 
         componentWillUnmount: function() {

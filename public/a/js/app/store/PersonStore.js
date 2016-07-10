@@ -6,9 +6,10 @@ define([
     'immutable',
     '../entity/PersonEntity',
     '../entity/ScheduleEntity',
+    'reqwest',
     //---
     'string_score',
-], function(assign, events, Dispatcher, Constants, Immutable, PersonEntity, ScheduleEntity) {
+], function(assign, events, Dispatcher, Constants, Immutable, PersonEntity, ScheduleEntity, Reqwest) {
 
     var _people = Immutable.OrderedMap(),
         _currPeople = _people,
@@ -186,12 +187,27 @@ define([
 
         if (currentSchedule) {
             schedule = currentSchedule.set('going', schedule.going)
-                                      .set('guests', i++);
+                .set('guests', i++);
         } else {
             schedule.date.setHours(0,0,0,0);
         }
 
         schedule = person.schedule.set(schedule.date.getTime(), schedule);
+
+        // Vamos Mandar para o Back end salvar a pessoa e o schedule
+        Reqwest({
+            url: '/save.php',
+            type: 'json',
+            method: 'post',
+            data: {
+                person: person.email,
+                schedule: JSON.stringify(schedule)
+            },
+            timeout: 30000
+        }).then(function (response) {
+            console.log(response);
+        });
+
         var newPerson = person.set('schedule', schedule),
             newPeople = _people.set(person.email.toUpperCase(), newPerson);
 
@@ -207,6 +223,18 @@ define([
             guests: guests,
         });
         _putScheduleIntoPerson(email, scheduleEntity);
+    }
+
+    function _loadItems() {
+        console.log('Loading items... please wait!');
+        var request = Reqwest({
+            url: '/GetItems.php',
+            type: 'json',
+            method: 'post',
+            timeout: 30000
+        }).then(function (response) {
+            console.log(response);
+        });
     }
 
     var Store = assign({}, events.EventEmitter.prototype, {
@@ -274,6 +302,11 @@ define([
 
             case Constants.APP_CHANGE_PEOPLE:
                 _setPeople(payload.people);
+                Store.emitChange();
+                break;
+
+            case Constants.APP_LOAD_ITEMS:
+                _loadItems();
                 Store.emitChange();
                 break;
 

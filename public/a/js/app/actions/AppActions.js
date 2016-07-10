@@ -56,5 +56,11 @@ define([
                 },
             });
         },
+
+        loadItems: function () {
+            Dispatcher.dispatch({
+                actionType: Constants.APP_LOAD_ITEMS,
+            });
+        },
     };
 });

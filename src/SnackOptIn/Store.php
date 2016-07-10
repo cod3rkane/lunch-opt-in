@@ -91,7 +91,17 @@ class Store
 
     public function addSchedule($email, Schedule $newSchedule)
     {
-        
+
+    }
+
+    public function addItem(Person $person)
+    {
+        if (!$personExist = $this->byEmail($person->getEmail()))
+            array_push($this->items, $person);
+        else
+            $personExist->setSchedule($person->getSchedule());
+
+        $this->write();
     }
 
 //    public function toArray(array $items = null)
@@ -140,7 +150,7 @@ class Store
             if (!file_exists($dir)) {
                 mkdir($dir, 0777, true);
             }
-            
+
             file_put_contents($this->file, serialize($this->items));
             ErrorHandler::stop(true);
             Semaphore::release($sempahore);
