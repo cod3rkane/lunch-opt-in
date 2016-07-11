@@ -1,7 +1,8 @@
 define([
     '../dispatcher/AppDispatcher',
     '../constants/AppConstants',
-], function(Dispatcher, Constants) {
+    '../util/api'
+], function(Dispatcher, Constants, API) {
     return {
         /**
          * @param {string} text
@@ -37,6 +38,8 @@ define([
                     date: date,
                 },
             });
+
+            API.createPerson(email, going, guests, date);
         },
 
         openScheduleModal: function (person) {
@@ -48,19 +51,23 @@ define([
             });
         },
 
-        changePeople: function (people) {
+        changePerson: function (person) {
             Dispatcher.dispatch({
-                actionType: Constants.APP_CHANGE_PEOPLE,
+                actionType: Constants.APP_SAVING_PERSON,
                 payload: {
-                    people: people,
+                    person: person,
                 },
             });
+
+            API.savePerson(person);
         },
 
         loadItems: function () {
             Dispatcher.dispatch({
-                actionType: Constants.APP_LOAD_ITEMS,
+                actionType: Constants.APP_FETCHING_ITEMS,
             });
+
+            API.loadItems();
         },
     };
 });

@@ -179,9 +179,9 @@ define([
         },
 
         _onClickSave: function (e) {
-            var people = PersonStore.getAll(),
-                newPeople = people.set(this.state.person.email.toUpperCase(), this.state.person);
-            AppActions.changePeople(newPeople);
+            // var people = PersonStore.getAll(),
+            //     newPeople = people.set(this.state.person.email.toUpperCase(), this.state.person);
+            AppActions.changePerson(this.state.person);
         }
     })
 });

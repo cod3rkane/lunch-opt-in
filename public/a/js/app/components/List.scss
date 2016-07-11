@@ -1,0 +1,15 @@
+.a-c-list_--_
+{
+  .list-loading_--_
+  {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+    &.true
+    {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

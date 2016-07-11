@@ -4,12 +4,17 @@ define([
     'immutable',
     '../store/PersonStore',
     './ScheduleModal',
-    '../actions/AppActions'
-], function(React, ListItem, Immutable, PersonStore, ScheduleModal, Actions) {
+    '../../../img/lightbox/preloader.gif',
+    '../actions/AppActions',
+    //----
+    './List.scss'
+], function(React, ListItem, Immutable, PersonStore, ScheduleModal, preloader, Actions) {
 
     function getStateStore() {
         return {
             people: PersonStore.getCurrPeople(),
+            fetching_items: false,
+            fetching_error: ''
         };
     }
 
@@ -26,11 +31,16 @@ define([
 
         componentDidMount: function() {
             PersonStore.addChangeListener(this._onChange);
-            Actions.loadItems();
+            // @todo este componente precisa escutar os eventos de load, fetching e error do serverActions.
+            PersonStore.addFetchingItemsListener(this._onFetchingItems);
+            PersonStore.addReceiveItemsListener(this._onReceiveItems);
+            PersonStore.addReceiveItemsWithErrorListener(this._onReceiveItemsError);
         },
 
         componentWillUnmount: function() {
             PersonStore.removeChangeListener(this._onChange);
+            PersonStore.removeFetchingItemsListener(this._onFetchingItems);
+            PersonStore.removeReceiveItemsListener(this._onReceiveItems);
         },
 
         render: function() {
@@ -47,6 +57,10 @@ define([
             return (
                 <div className="a-c-list_--_">
                     <div className="row">
+                        <div className={"list-loading_--_ text-xs-center " + this.state.fetching_items}>
+                            <img src={preloader} alt={__("Pacman Loading animation")}/>
+                        </div>
+                        {this.state.fetching_error}
                         {listItems}
                         <ScheduleModal />
                     </div>
@@ -56,6 +70,23 @@ define([
 
         _onChange: function() {
             this.setState(getStateStore());
+        },
+
+        _onFetchingItems: function () {
+            this.setState({
+                fetching_items: true
+            });
+        },
+
+        _onReceiveItems: function () {
+            this.setState(getStateStore());
+        },
+
+        _onReceiveItemsError: function () {
+            this.setState({
+                fetching_items: false,
+                fetching_error: <div className="text-xs-center">{__("could not load items, please try again later.")}</div>
+            });
         }
 
     });

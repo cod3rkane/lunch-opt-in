@@ -13,7 +13,10 @@ define([
 
     var _people = Immutable.OrderedMap(),
         _currPeople = _people,
-        CHANGE_EVENT = 'change';
+        CHANGE_EVENT = 'change',
+        FETCHING_ITEMS_EVENT = 'fetching items',
+        RECEIVE_ITEMS_EVENT = 'receive items',
+        RECEIVE_ITEMS_WITH_ERROR = 'fetching items return error';
 
     var fixedHolidays = [
         {d:  1, m:  1, title: 'Confraternização Universal'},
@@ -194,20 +197,6 @@ define([
 
         schedule = person.schedule.set(schedule.date.getTime(), schedule);
 
-        // Vamos Mandar para o Back end salvar a pessoa e o schedule
-        Reqwest({
-            url: '/save.php',
-            type: 'json',
-            method: 'post',
-            data: {
-                person: person.email,
-                schedule: JSON.stringify(schedule)
-            },
-            timeout: 30000
-        }).then(function (response) {
-            console.log(response);
-        });
-
         var newPerson = person.set('schedule', schedule),
             newPeople = _people.set(person.email.toUpperCase(), newPerson);
 
@@ -225,16 +214,39 @@ define([
         _putScheduleIntoPerson(email, scheduleEntity);
     }
 
-    function _loadItems() {
-        console.log('Loading items... please wait!');
-        var request = Reqwest({
-            url: '/GetItems.php',
-            type: 'json',
-            method: 'post',
-            timeout: 30000
-        }).then(function (response) {
-            console.log(response);
+    function _newSchedule(going, guests, date) {
+        return new ScheduleEntity({
+            date: date,
+            going: going,
+            guests: guests,
         });
+    }
+
+    function _newPersonWithSchedule(email, going, guests, date) {
+        var person = new PersonEntity({
+            email: email,
+        });
+
+        var schedule = _newSchedule(going, guests, date);
+
+        return person.set('schedule', schedule);
+    }
+
+    function _personChange(person) {
+        var people = Store.getAll(),
+            newPeople = people.set(person.email.toUpperCase(), person);
+
+        _setPeople(newPeople);
+    }
+
+    function _receiveItems(data) {
+        for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+                data[key].schedule.forEach(function (e) {
+                    _createPersonSchedule(data[key].email, e.going, e.guests, new Date(e.date.date));
+                });
+            }
+        }
     }
 
     var Store = assign({}, events.EventEmitter.prototype, {
@@ -251,6 +263,42 @@ define([
 
         removeChangeListener: function(callback) {
             this.removeListener(CHANGE_EVENT, callback);
+        },
+
+        emitFetchingItems: function () {
+            this.emit(FETCHING_ITEMS_EVENT)
+        },
+
+        addFetchingItemsListener: function (callback) {
+            this.on(FETCHING_ITEMS_EVENT, callback);
+        },
+
+        removeFetchingItemsListener: function (callback) {
+            this.removeListener(FETCHING_ITEMS_EVENT, callback);
+        },
+
+        emitReceiveItems: function () {
+            this.emit(RECEIVE_ITEMS_EVENT);
+        },
+
+        addReceiveItemsListener: function (callback) {
+            this.on(RECEIVE_ITEMS_EVENT, callback);
+        },
+
+        removeReceiveItemsListener: function (callback) {
+            this.removeListener(RECEIVE_ITEMS_EVENT, callback);
+        },
+
+        emitReceiveItemsWithError: function () {
+            this.emit(RECEIVE_ITEMS_WITH_ERROR);
+        },
+
+        addReceiveItemsWithErrorListener: function (callback) {
+            this.on(RECEIVE_ITEMS_WITH_ERROR, callback);
+        },
+
+        removeReceiveItemsWithErrorListener: function (callback) {
+            this.removeListener(RECEIVE_ITEMS_WITH_ERROR, callback);
         },
 
         /**
@@ -276,6 +324,10 @@ define([
          */
         getNextScheduleDate: function (person) {
             return _getNextScheduleDate(person);
+        },
+
+        newPersonWithSchedule: function (email, going, guests, date) {
+            return _newPersonWithSchedule(email, going, guests, date);
         }
     });
 
@@ -300,14 +352,30 @@ define([
                 Store.emitChange();
                 break;
 
-            case Constants.APP_CHANGE_PEOPLE:
-                _setPeople(payload.people);
+            case Constants.APP_SAVING_PERSON:
+                _personChange(payload.person);
                 Store.emitChange();
                 break;
 
-            case Constants.APP_LOAD_ITEMS:
-                _loadItems();
-                Store.emitChange();
+            case Constants.APP_FETCHING_ITEMS:
+                Store.emitFetchingItems();
+                break;
+
+            case Constants.APP_SAVED_PERSON:
+                // @todo emitir um evento, avisando que um item foi salvo.
+                break;
+
+            case Constants.APP_SAVED_PERSON_ERROR:
+                // @todo emitir um evento avisando que ocorreu um erro ao salvar o person.
+                break;
+
+            case Constants.APP_RECEIVE_API_DATA:
+                _receiveItems(payload.data);
+                Store.emitReceiveItems();
+                break;
+
+            case Constants.APP_RECEIVE_API_ERROR:
+                Store.emitReceiveItemsWithError();
                 break;
 
             default:
