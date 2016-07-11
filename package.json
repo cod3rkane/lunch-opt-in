@@ -1,42 +1,46 @@
 {
-    "name": "lunch-opt-in",
-    "version": "0.0.0",
-    "description": "Lunch Opt-in",
-    "main": "index.js",
-    "dependencies": {
-        "babel-core": "^6.9.1",
-        "babel-loader": "^6.2.4",
-        "babel-preset-react": "^6.5.0",
-        "clean-webpack-plugin": "^0.1.9",
-        "css-loader": "^0.23.1",
-        "flux": "^2.1.1",
-        "get-env": "^0.4.0",
-        "i18n-webpack-plugin": "^0.2.7",
-        "immutable": "^3.8.1",
-        "keymirror": "^0.1.1",
-        "md5": "^2.1.0",
-        "node-sass": "^3.7.0",
-        "object-assign": "^4.1.0",
-        "react": "^15.1.0",
-        "react-dom": "^15.1.0",
-        "reqwest": "^2.0.5",
-        "sass-loader": "^3.2.0",
-        "string_score": "^0.1.22",
-        "style-loader": "^0.13.1",
-        "webpack": "^1.13.1"
-    },
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/stavarengo/lunch-opt-in.git"
-    },
-    "author": "Stavarengo",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/stavarengo/lunch-opt-in/issues"
-    },
-    "homepage": "https://github.com/stavarengo/lunch-opt-in#readme"
+  "name": "lunch-opt-in",
+  "version": "0.0.0",
+  "description": "Lunch Opt-in",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.5.0",
+    "clean-webpack-plugin": "^0.1.9",
+    "css-loader": "^0.23.1",
+    "flux": "^2.1.1",
+    "get-env": "^0.4.0",
+    "i18n-webpack-plugin": "^0.2.7",
+    "immutable": "^3.8.1",
+    "keymirror": "^0.1.1",
+    "md5": "^2.1.0",
+    "node-sass": "^3.7.0",
+    "object-assign": "^4.1.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "reqwest": "^2.0.5",
+    "sass-loader": "^3.2.0",
+    "string_score": "^0.1.22",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "image-webpack-loader": "^2.0.0",
+    "loader-utils": "^0.2.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stavarengo/lunch-opt-in.git"
+  },
+  "author": "Stavarengo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stavarengo/lunch-opt-in/issues"
+  },
+  "homepage": "https://github.com/stavarengo/lunch-opt-in#readme"
 }
