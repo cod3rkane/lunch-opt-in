@@ -30,9 +30,11 @@ define([
                 case SavedStatusEntity.STATUS_PENDING:
                     status = (<span className="label label-warning">{__('Pending')}</span>);
                     break;
+                /*
                 case SavedStatusEntity.STATUS_SUCCESS:
                     status = (<span className="label label-success">{__('Success')}</span>);
                     break;
+                */
                 case SavedStatusEntity.STATUS_ERROR:
                     status = (<span className="label label-danger">{__('Error, Please Try Again')}</span>);
                     break;
