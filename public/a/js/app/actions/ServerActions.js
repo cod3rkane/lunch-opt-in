@@ -3,19 +3,21 @@ define([
     '../constants/AppConstants',
 ], function(Dispatcher, Constants) {
     return {
-        savedPerson: function (status) {
+        savedPerson: function (email, status) {
             Dispatcher.dispatch({
                 actionType: Constants.APP_SAVED_PERSON,
                 payload: {
+                    id: email,
                     status: status,
                 },
             });
         },
 
-        savedPersonError: function (error) {
+        savedPersonError: function (email, error) {
             Dispatcher.dispatch({
                 actionType: Constants.APP_SAVED_PERSON_ERROR,
                 payload: {
+                    id: email,
                     error: error,
                 },
             });

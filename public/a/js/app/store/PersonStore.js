@@ -6,17 +6,22 @@ define([
     'immutable',
     '../entity/PersonEntity',
     '../entity/ScheduleEntity',
+    '../entity/SavedStatusEntity',
     'reqwest',
     //---
     'string_score',
-], function(assign, events, Dispatcher, Constants, Immutable, PersonEntity, ScheduleEntity, Reqwest) {
+], function(assign, events, Dispatcher, Constants, Immutable, PersonEntity, ScheduleEntity, SavedStatusEntity, Reqwest) {
 
     var _people = Immutable.OrderedMap(),
         _currPeople = _people,
         CHANGE_EVENT = 'change',
         FETCHING_ITEMS_EVENT = 'fetching items',
         RECEIVE_ITEMS_EVENT = 'receive items',
-        RECEIVE_ITEMS_WITH_ERROR = 'fetching items return error';
+        RECEIVE_ITEMS_WITH_ERROR = 'fetching items return error',
+        SAVED_PERSON_EVENT = 'person saved with success';
+
+    // Status Stack
+    var _savedStatusStack = Immutable.OrderedMap();
 
     var fixedHolidays = [
         {d:  1, m:  1, title: 'Confraternização Universal'},
@@ -249,6 +254,22 @@ define([
         }
     }
 
+    function _pushSavedStack(id, status) {
+        var newStatus = new SavedStatusEntity({
+            id: id,
+            status: status
+        });
+
+        var newSavedStack = _savedStatusStack.set(id, newStatus);
+        _setSavedStatusStack(newSavedStack);
+    }
+
+    function _setSavedStatusStack(newStack) {
+        _savedStatusStack = newStack;
+
+        return _savedStatusStack;
+    }
+
     var Store = assign({}, events.EventEmitter.prototype, {
         emitChange: function() {
             this.emit(CHANGE_EVENT);
@@ -301,6 +322,18 @@ define([
             this.removeListener(RECEIVE_ITEMS_WITH_ERROR, callback);
         },
 
+        emitSavedPerson: function () {
+            this.emit(SAVED_PERSON_EVENT);
+        },
+
+        addSavedPersonListener: function (callback) {
+            this.on(SAVED_PERSON_EVENT, callback);
+        },
+
+        removeSavedPersonListener: function (callback) {
+            this.removeListener(SAVED_PERSON_EVENT, callback);
+        },
+
         /**
          *
          * @returns {List<PersonEntity>}
@@ -328,6 +361,13 @@ define([
 
         newPersonWithSchedule: function (email, going, guests, date) {
             return _newPersonWithSchedule(email, going, guests, date);
+        },
+
+        getSavedStackById: function (email) {
+            var thread = _savedStatusStack.get(email);
+            var newSavedStack = _savedStatusStack.delete(email);
+            _setSavedStatusStack(newSavedStack);
+            return thread;
         }
     });
 
@@ -362,10 +402,12 @@ define([
                 break;
 
             case Constants.APP_SAVED_PERSON:
-                // @todo emitir um evento, avisando que um item foi salvo.
+                _pushSavedStack(payload.id, payload.status);
+                Store.emitSavedPerson();
                 break;
 
             case Constants.APP_SAVED_PERSON_ERROR:
+                // @todo vamos salvar o status na fila junto com o ID, para avisar que esse ID tem um status de erro.
                 // @todo emitir um evento avisando que ocorreu um erro ao salvar o person.
                 break;
 

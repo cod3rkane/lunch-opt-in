@@ -1,8 +1,9 @@
 define([
     'reqwest',
     '../actions/ServerActions',
-    '../store/PersonStore'
-], function (Reqwest, ServerActions, PersonStore) {
+    '../store/PersonStore',
+    '../entity/SavedStatusEntity'
+], function (Reqwest, ServerActions, PersonStore, SavedStatusEntity) {
     return {
         loadItems: function () {
             console.log('Loading items... please wait!');
@@ -36,10 +37,15 @@ define([
                     schedule: JSON.stringify(person.schedule)
                 },
                 success: function (status) {
-                    ServerActions.savedPerson(status);
+                    console.log(person);
+                    console.info('Saved Success');
+                    console.info(status);
+                    ServerActions.savedPerson(person.email, SavedStatusEntity.STATUS_SUCCESS);
                 },
                 error: function (error) {
-                    ServerActions.savedPersonError(error);
+                    console.info('Saved Error');
+                    console.info(error);
+                    ServerActions.savedPersonError(person.email, SavedStatusEntity.STATUS_ERROR);
                 }
             });
         },

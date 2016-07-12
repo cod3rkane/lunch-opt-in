@@ -5,9 +5,10 @@ define([
     '../actions/AppActions',
     './ScheduleSection',
     '../store/PersonStore',
+    '../entity/SavedStatusEntity',
     //----
     './ListItem.scss'
-], function(React, Person, Schedule, Actions, ScheduleSection, PersonStore) {
+], function(React, Person, Schedule, Actions, ScheduleSection, PersonStore, SavedStatusEntity) {
 
     var defaultProps = new Person();
 
@@ -22,10 +23,23 @@ define([
             return defaultProps;
         },
 
-        getInitialState: function () {
+        getDefaultState: function () {
             return {
-                currDate: this._getNextWorkDate(this.props.person)
+                currDate: this._getNextWorkDate(this.props.person),
+                savedStatus: PersonStore.getSavedStackById(this.props.person.email)
             }
+        },
+
+        getInitialState: function () {
+            return this.getDefaultState()
+        },
+
+        componentDidMount: function () {
+            PersonStore.addSavedPersonListener(this._onSavedPerson);
+        },
+
+        componentWillUnmount: function () {
+            PersonStore.removeSavedPersonListener(this._onSavedPerson);
         },
 
         componentWillReceiveProps: function (nextProps) {
@@ -43,6 +57,9 @@ define([
             }
 
             var touchSeeMore = (this.props.person.schedule.size > 1);
+
+            // @todo vamos checar se existe status na Stack.
+            console.log(this.state.savedStatus);
 
             return (
                 <div className="a-c-list-item">
@@ -168,6 +185,10 @@ define([
 
         _onClickSeeMore: function(e) {
             Actions.openScheduleModal(this.props.person);
+        },
+
+        _onSavedPerson: function () {
+            this.setState(this.getDefaultState());
         },
     });
 });

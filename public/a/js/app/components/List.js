@@ -31,7 +31,6 @@ define([
 
         componentDidMount: function() {
             PersonStore.addChangeListener(this._onChange);
-            // @todo este componente precisa escutar os eventos de load, fetching e error do serverActions.
             PersonStore.addFetchingItemsListener(this._onFetchingItems);
             PersonStore.addReceiveItemsListener(this._onReceiveItems);
             PersonStore.addReceiveItemsWithErrorListener(this._onReceiveItemsError);
@@ -41,18 +40,24 @@ define([
             PersonStore.removeChangeListener(this._onChange);
             PersonStore.removeFetchingItemsListener(this._onFetchingItems);
             PersonStore.removeReceiveItemsListener(this._onReceiveItems);
+            PersonStore.removeReceiveItemsWithErrorListener(this._onReceiveItemsError);
         },
 
         render: function() {
-            var listItems = this.state.people.valueSeq().map(function(/*../entity/Person*/person) {
-                return (
-                    <div class="card-columns" key={person.email.toUpperCase()}>
-                        <ListItem
-                            person={person}
-                        />
-                    </div>
-                );
-            }, this);
+            var listItems;
+            if (this.state.people.size == 0 && !this.state.fetching_error) {
+                listItems = <div className="text-xs-center">{__("No item found")}</div>
+            } else {
+                listItems = this.state.people.valueSeq().map(function(/*../entity/Person*/person) {
+                    return (
+                        <div class="card-columns" key={person.email.toUpperCase()}>
+                            <ListItem
+                                person={person}
+                            />
+                        </div>
+                    );
+                }, this);
+            }
 
             return (
                 <div className="a-c-list_--_">
