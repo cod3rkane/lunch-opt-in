@@ -31,7 +31,7 @@ define([
                 url: '/save.php',
                 type: 'json',
                 method: 'post',
-                timeout: 100,
+                timeout: 30000,
                 data: {
                     person: person.email,
                     schedule: JSON.stringify(person.schedule)
