@@ -1,9 +1,10 @@
 define([
     'react',
     '../entity/ScheduleEntity',
+    '../entity/SavedStatusEntity',
     //----
     './ScheduleItem.scss'
-], function(React, Schedule) {
+], function(React, Schedule, SavedStatusEntity) {
 
     var defaultProps = {
         schedule: new Schedule()
@@ -23,6 +24,20 @@ define([
 
         render: function() {
             var schedule = this.props.schedule;
+            var status;
+
+            switch (schedule.status) {
+                case SavedStatusEntity.STATUS_PENDING:
+                    status = (<span className="label label-warning">{__('Pending')}</span>);
+                    break;
+                case SavedStatusEntity.STATUS_SUCCESS:
+                    status = (<span className="label label-success">{__('Success')}</span>);
+                    break;
+                case SavedStatusEntity.STATUS_ERROR:
+                    status = (<span className="label label-danger">{__('Error, Please Try Again')}</span>);
+                    break;
+            }
+
             return (
                 <div className="a-c-schedule-item" onClick={this._onEditClickHandle}>
                     <div>
@@ -30,8 +45,8 @@ define([
                                                  <span> - </span>
                         {schedule.going ? ' going ' : ' not going '}
                                                 <span> - </span>
-                        {schedule.guests}
-                        {schedule.status}
+                        {(schedule.guests != 0 ? schedule.guests + ' - ' : '')}
+                        {status}
                     </div>
                 </div>
             );

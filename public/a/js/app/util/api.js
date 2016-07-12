@@ -39,7 +39,11 @@ define([
                 success: function (status) {
                     console.info('Saved Success');
                     console.log(status);
-                    ServerActions.savedPerson(person.email, person.schedule, SavedStatusEntity.STATUS_SUCCESS);
+                    if(status === true) {
+                        ServerActions.savedPerson(person.email, person.schedule, SavedStatusEntity.STATUS_SUCCESS);
+                    } else {
+                        ServerActions.savedPerson(person.email, person.schedule, SavedStatusEntity.STATUS_ERROR);
+                    }
                 },
                 error: function (error) {
                     console.info('Saved Error');
