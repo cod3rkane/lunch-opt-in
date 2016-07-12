@@ -8,7 +8,7 @@ define([
     var defaultProps = {
         schedule: new Schedule()
     };
-    
+
     return React.createClass({
         displayName: 'ScheduleItem',
 
@@ -31,6 +31,7 @@ define([
                         {schedule.going ? ' going ' : ' not going '}
                                                 <span> - </span>
                         {schedule.guests}
+                        {schedule.status}
                     </div>
                 </div>
             );

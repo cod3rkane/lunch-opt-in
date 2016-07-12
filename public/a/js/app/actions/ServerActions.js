@@ -3,21 +3,23 @@ define([
     '../constants/AppConstants',
 ], function(Dispatcher, Constants) {
     return {
-        savedPerson: function (email, status) {
+        savedPerson: function (email, thread, status) {
             Dispatcher.dispatch({
                 actionType: Constants.APP_SAVED_PERSON,
                 payload: {
                     id: email,
+                    thread: thread,
                     status: status,
                 },
             });
         },
 
-        savedPersonError: function (email, error) {
+        savedPersonError: function (email, thread, error) {
             Dispatcher.dispatch({
                 actionType: Constants.APP_SAVED_PERSON_ERROR,
                 payload: {
                     id: email,
+                    thread: thread,
                     status: error,
                 },
             });

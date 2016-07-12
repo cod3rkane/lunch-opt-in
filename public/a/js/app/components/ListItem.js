@@ -58,7 +58,8 @@ define([
                 domain = email.replace(/^.+?@/, '@')
             }
 
-            var touchSeeMore = (this.props.person.schedule.size > 1);
+            var touchSeeMore = (this.props.person.schedule.size > 1),
+                TouchErrorIcon = '';
 
             if (this.state.savedStatus && this.state.savedStatus.status) {
                 switch (this.state.savedStatus.status) {
@@ -67,6 +68,7 @@ define([
                         break;
                     case SavedStatusEntity.STATUS_ERROR:
                         this.state.savedStatus = (<div className="text-xs-center">{__("An error occurred")}</div>);
+                        TouchErrorIcon = 'ErrorIcon';
                         break;
                     case SavedStatusEntity.STATUS_PENDING:
                         this.state.savedStatus = (<div className="text-xs-center">{__("Pending")}</div>);
@@ -106,7 +108,7 @@ define([
                                 <hr/>
                                 <ScheduleSection schedule={this.props.person.schedule} first={true}/>
                                 <div className={"touch-smore text-xs-center " + touchSeeMore} onClick={this._onClickSeeMore}>
-                                    <b>{__('Touch see more')}</b>
+                                    <b>{__('Touch see more')} {TouchErrorIcon}</b>
                                 </div>
                             </div>
                             <div className="new-schedule text-xs-center">

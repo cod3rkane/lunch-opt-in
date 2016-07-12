@@ -37,15 +37,14 @@ define([
                     schedule: JSON.stringify(person.schedule)
                 },
                 success: function (status) {
-                    console.log(person);
                     console.info('Saved Success');
-                    console.info(status);
-                    ServerActions.savedPerson(person.email, SavedStatusEntity.STATUS_SUCCESS);
+                    console.log(status);
+                    ServerActions.savedPerson(person.email, person.schedule, SavedStatusEntity.STATUS_SUCCESS);
                 },
                 error: function (error) {
                     console.info('Saved Error');
-                    console.info(error);
-                    ServerActions.savedPersonError(person.email, SavedStatusEntity.STATUS_ERROR);
+                    console.log(error);
+                    ServerActions.savedPersonError(person.email, person.schedule, SavedStatusEntity.STATUS_ERROR);
                 }
             });
         },

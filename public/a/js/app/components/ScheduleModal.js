@@ -32,6 +32,7 @@ define([
             if (this.state.person.size) {
                 $('.a-c-schedule-modal').modal('show').on('hidden.bs.modal', this._onClickCancel);
             }
+            var editDate = this.state.shownEdit ? this.state.shownEdit.date.toISOString().slice(0, 10).split('-') : '';
 
             return (
                 <div className="a-c-schedule-modal modal fade">
@@ -52,34 +53,17 @@ define([
                                             </button>
                                         </div>
                                         <div>
-                                            <div className="new-schedule text-xs-center">
-                                                <p className="bq-title">{__("Edit Schedule")}</p>
-                                                <section className="row">
-                                                    <div className="col-xs-2">
-                                                        <p className="text-xs-center">
-                                                            {__("For:")}
-                                                        </p>
-                                                    </div>
-                                                    <div className="col-xs-4 text-xs-center">
-                                                        {(this.state.shownEdit ? this.state.shownEdit.date.toDateString() : '')}
-                                                    </div>
-                                                    <div className="col-xs-6">
-                                                        <div className="col-xs-12">
-                                                            <button
-                                                                data-changedate="1"
-                                                                className="btn btn-large btn-primary waves-effect waves-light full-width"
-                                                                onClick={this._onClickChangeDate}>+</button>
-                                                        </div>
-                                                        <div className="col-xs-12">
-                                                            <button
-                                                                data-changedate="0"
-                                                                className="btn btn-primary waves-effect waves-light full-width"
-                                                                onClick={this._onClickChangeDate}>-</button>
-                                                        </div>
+                                            <div className="new-schedule">
+                                                <section>
+                                                    <div className="col-xs-12">
+                                                        <input type="date" className="form-control text-xs-center"
+                                                               value={(editDate ? editDate[0] + '-' + editDate[1] + '-' + editDate[2] : '')}
+                                                               onChange={this._onDatePicker}
+                                                        />
                                                     </div>
                                                 </section>
                                             </div>
-                                            <div className="schedule-btn-section">
+                                            <div className="schedule-btn-section text-xs-center">
                                                 <button
                                                     onClick={this._onClickOpt}
                                                     className="btn btn-primary bt-opt-in waves-effect waves-light">
@@ -91,6 +75,8 @@ define([
                                                     onClick={this._onClickGuests}>
                                                     {__('Bringing guests')}
                                                 </button>
+                                                <button className="btn btn-success waves-effect waves-light"
+                                                        onClick={this._onClickSave}>{__("Save")}</button>
                                             </div>
                                         </div>
                                     </div>
@@ -99,7 +85,6 @@ define([
                             <div className="modal-footer">
                                 <button className="btn btn-secondary" data-dismiss="modal"
                                         onClick={this._onClickCancel}>{__("Cancel")}</button>
-                                <button className="btn btn-primary" onClick={this._onClickSave}>{__("Save all change")}</button>
                             </div>
                         </div>
                     </div>
@@ -132,18 +117,6 @@ define([
             });
         },
 
-        _onClickChangeDate: function (e) {
-            var nextDate = new Date();
-
-            if (e.target.getAttribute('data-changedate') == 1)
-                nextDate.setDate(this.state.shownEdit.date.getDate() + 1);
-            else
-                nextDate.setDate(this.state.shownEdit.date.getDate() - 1);
-
-            var newSchedule = this.state.shownEdit.set('date', nextDate);
-            this._updateSchedule(newSchedule);
-        },
-
         _onClickOpt: function(e) {
             var newSChedule = this.state.shownEdit.set('going', !this.state.shownEdit.going);
 
@@ -167,21 +140,21 @@ define([
         },
 
         _updateSchedule: function (newSchedule) {
-            var key = this.state.person.schedule.keyOf(this.state.currEditSchedule),
-                schedules = this.state.person.schedule.set(key, newSchedule),
-                newPerson = this.state.person.set('schedule', schedules);
-
             this.setState({
-                shownEdit: newSchedule,
-                currEditSchedule: newSchedule,
-                person: newPerson
+                shownEdit: newSchedule
             });
         },
 
         _onClickSave: function (e) {
-            // var people = PersonStore.getAll(),
-            //     newPeople = people.set(this.state.person.email.toUpperCase(), this.state.person);
-            AppActions.changePerson(this.state.person);
+            AppActions.createPersonSchedule(this.state.person.email, this.state.shownEdit.going,
+                this.state.shownEdit.guests, this.state.shownEdit.date);
+        },
+
+        _onDatePicker: function (e) {
+            var newEdit = this.state.shownEdit.set('date', new Date(e.target.value));
+            this.setState({
+                shownEdit: newEdit
+            });
         }
     })
 });

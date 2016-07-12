@@ -58,7 +58,7 @@ define([
                     person: person,
                 },
             });
-
+            
             API.savePerson(person);
         },
 

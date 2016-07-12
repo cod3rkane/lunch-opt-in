@@ -4,7 +4,7 @@ define([
 
     var Entity = Immutable.Record({
         id: '',
-        status: this.STATUS_PENDING
+        status: this.STATUS_PENDING,
     });
 
     Entity.STATUS_SUCCESS = 1;

@@ -211,11 +211,12 @@ define([
         return schedule;
     }
 
-    function _createPersonSchedule(email, going, guests, date) {
+    function _createPersonSchedule(email, going, guests, date, status) {
         var scheduleEntity = new ScheduleEntity({
             date: date,
             going: going,
             guests: guests,
+            status: status
         });
         _putScheduleIntoPerson(email, scheduleEntity);
     }
@@ -225,6 +226,7 @@ define([
             date: date,
             going: going,
             guests: guests,
+            status: SavedStatusEntity.STATUS_PENDING
         });
     }
 
@@ -249,13 +251,14 @@ define([
         for (var key in data) {
             if (data.hasOwnProperty(key)) {
                 data[key].schedule.forEach(function (e) {
-                    _createPersonSchedule(data[key].email, e.going, e.guests, new Date(e.date.date));
+                    _createPersonSchedule(data[key].email, e.going, e.guests, new Date(e.date.date),
+                        SavedStatusEntity.STATUS_SUCCESS);
                 });
             }
         }
     }
 
-    function _pushSavedStack(id, status) {
+    function _pushSavedStack(id, thread, status) {
         var newStatus = new SavedStatusEntity({
             id: id,
             status: status
@@ -263,6 +266,14 @@ define([
 
         var newSavedStack = _savedStatusStack.set(id, newStatus);
         _setSavedStatusStack(newSavedStack);
+
+        var person = _getPersonByEmail(id);
+
+        var schedule = _getPersonScheduleByDate(person, thread.date);
+        var newScheduleStatus = schedule.set('status', status);
+        var Schedules = person.schedule.set(person.schedule.keyOf(schedule), newScheduleStatus);
+        person = person.set('schedule', Schedules);
+        _personChange(person);
     }
 
     function _setSavedStatusStack(newStack) {
@@ -408,7 +419,7 @@ define([
                 break;
 
             case Constants.APP_CREATE_PERSON_SCHEDULE:
-                _createPersonSchedule(payload.email, payload.going, payload.guests, payload.date);
+                _createPersonSchedule(payload.email, payload.going, payload.guests, payload.date, SavedStatusEntity.STATUS_PENDING);
                 Store.emitChange();
                 break;
 
@@ -422,13 +433,15 @@ define([
                 break;
 
             case Constants.APP_SAVED_PERSON:
-                _pushSavedStack(payload.id, payload.status);
+                _pushSavedStack(payload.id, payload.thread, payload.status);
                 Store.emitSavedPerson();
+                Store.emitChange();
                 break;
 
             case Constants.APP_SAVED_PERSON_ERROR:
-                _pushSavedStack(payload.id, payload.status);
+                _pushSavedStack(payload.id, payload.thread, payload.status);
                 Store.emitSavedPersonError();
+                Store.emitChange();
                 break;
 
             case Constants.APP_RECEIVE_API_DATA:
