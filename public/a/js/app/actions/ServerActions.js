@@ -18,7 +18,7 @@ define([
                 actionType: Constants.APP_SAVED_PERSON_ERROR,
                 payload: {
                     id: email,
-                    error: error,
+                    status: error,
                 },
             });
         },

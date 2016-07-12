@@ -18,7 +18,8 @@ define([
         FETCHING_ITEMS_EVENT = 'fetching items',
         RECEIVE_ITEMS_EVENT = 'receive items',
         RECEIVE_ITEMS_WITH_ERROR = 'fetching items return error',
-        SAVED_PERSON_EVENT = 'person saved with success';
+        SAVED_PERSON_EVENT = 'person saved with success',
+        SAVED_PERSON_ERROR = 'person saved with error';
 
     // Status Stack
     var _savedStatusStack = Immutable.OrderedMap();
@@ -266,6 +267,8 @@ define([
 
     function _setSavedStatusStack(newStack) {
         _savedStatusStack = newStack;
+        console.log('new SavedStack');
+        console.log(_savedStatusStack);
 
         return _savedStatusStack;
     }
@@ -334,6 +337,18 @@ define([
             this.removeListener(SAVED_PERSON_EVENT, callback);
         },
 
+        emitSavedPersonError: function () {
+            this.emit(SAVED_PERSON_ERROR);
+        },
+
+        addSavedPersonErrorListener: function (callback) {
+            this.on(SAVED_PERSON_ERROR, callback);
+        },
+
+        removeSavedPersonErrorListener: function (callback) {
+            this.removeListener(SAVED_PERSON_ERROR, callback);
+        },
+
         /**
          *
          * @returns {List<PersonEntity>}
@@ -365,9 +380,14 @@ define([
 
         getSavedStackById: function (email) {
             var thread = _savedStatusStack.get(email);
-            var newSavedStack = _savedStatusStack.delete(email);
-            _setSavedStatusStack(newSavedStack);
-            return thread;
+
+            if (thread) {
+                var newSavedStack = _savedStatusStack.delete(email);
+                _setSavedStatusStack(newSavedStack);
+                return thread;
+            }
+
+            return null;
         }
     });
 
@@ -407,8 +427,8 @@ define([
                 break;
 
             case Constants.APP_SAVED_PERSON_ERROR:
-                // @todo vamos salvar o status na fila junto com o ID, para avisar que esse ID tem um status de erro.
-                // @todo emitir um evento avisando que ocorreu um erro ao salvar o person.
+                _pushSavedStack(payload.id, payload.status);
+                Store.emitSavedPersonError();
                 break;
 
             case Constants.APP_RECEIVE_API_DATA:

@@ -11,9 +11,9 @@ define([
 ], function(React, Person, Schedule, Actions, ScheduleSection, PersonStore, SavedStatusEntity) {
 
     var defaultProps = new Person();
-
     return React.createClass({
         displayName: 'ListItem',
+        _setTimeOut: '',
 
         propTypes: {
             person: React.PropTypes.instanceOf(Person)
@@ -35,11 +35,13 @@ define([
         },
 
         componentDidMount: function () {
-            PersonStore.addSavedPersonListener(this._onSavedPerson);
+            PersonStore.addSavedPersonListener(this._onSaveStatus);
+            PersonStore.addSavedPersonErrorListener(this._onSaveStatus);
         },
 
         componentWillUnmount: function () {
-            PersonStore.removeSavedPersonListener(this._onSavedPerson);
+            PersonStore.removeSavedPersonListener(this._onSaveStatus);
+            PersonStore.removeSavedPersonErrorListener(this._onSaveStatus);
         },
 
         componentWillReceiveProps: function (nextProps) {
@@ -58,8 +60,35 @@ define([
 
             var touchSeeMore = (this.props.person.schedule.size > 1);
 
-            // @todo vamos checar se existe status na Stack.
-            console.log(this.state.savedStatus);
+            if (this.state.savedStatus && this.state.savedStatus.status) {
+                switch (this.state.savedStatus.status) {
+                    case SavedStatusEntity.STATUS_SUCCESS:
+                        this.state.savedStatus = (<div className="text-xs-center">{__("Schedule Saved.")}</div>);
+                        break;
+                    case SavedStatusEntity.STATUS_ERROR:
+                        this.state.savedStatus = (<div className="text-xs-center">{__("An error occurred")}</div>);
+                        break;
+                    case SavedStatusEntity.STATUS_PENDING:
+                        this.state.savedStatus = (<div className="text-xs-center">{__("Pending")}</div>);
+                        break;
+                    default:
+                        this.state.savedStatus = (<div className="text-xs-center">{__("Unknown error occurred")}</div>);
+                }
+
+                var me = this;
+
+                if (this._setTimeOut) {
+                    clearTimeout(this._setTimeOut);
+                    this._setTimeOut = '';
+                    setTimeout(function () {
+                        me.setState(me.getDefaultState);
+                    }, 5000);
+                } else {
+                    this._setTimeOut = setTimeout(function () {
+                        me.setState(me.getDefaultState);
+                    }, 5000);
+                }
+            }
 
             return (
                 <div className="a-c-list-item">
@@ -105,6 +134,7 @@ define([
                                     </div>
                                 </section>
                             </div>
+                            {(this.state.savedStatus ? this.state.savedStatus : '')}
                             <div className="schedule-btn-section">
                                 <button
                                     onClick={this._onClickOptOut}
@@ -187,9 +217,19 @@ define([
             Actions.openScheduleModal(this.props.person);
         },
 
-        _onSavedPerson: function () {
-            this.setState(this.getDefaultState());
-        },
+        _onSaveStatus: function () {
+            // pode ser que o PersonStore emita o evento avisando que mudou o status, mas foi para outro user.
+            if (this.state.savedStatus) {
+                var existStatus = PersonStore.getSavedStackById(this.props.person.email);
+                if (existStatus) {
+                    this.setState({
+                        savedStatus: existStatus
+                    });
+                }
+            } else {
+                this.setState(this.getDefaultState());
+            }
+        }
     });
 });
 /*
