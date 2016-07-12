@@ -50,7 +50,7 @@ define([
             } else {
                 listItems = this.state.people.valueSeq().map(function(/*../entity/Person*/person) {
                     return (
-                        <div className="card-columns" key={person.email.toUpperCase()}>
+                        <div key={person.email.toUpperCase()}>
                             <ListItem
                                 person={person}
                             />
