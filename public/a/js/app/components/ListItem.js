@@ -93,7 +93,7 @@ define([
 
             return (
                 <div className="a-c-list-item">
-                    <div className="col-xs-4">
+                    <div className="col-xs-12">
                         <div className="card testimonial-card">
                             <div className="card-up default-color-dark"></div>
                             <div className="avatar">
