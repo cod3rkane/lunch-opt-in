@@ -15,7 +15,7 @@ define([
                     <nav className="navbar navbar-dark bg-primary">
                         <div className="container-fluid">
                             <div className="col-xs-12">
-                                <form className="form-inline">
+                                <form className="form-inline" onSubmit={this._onSubmitListener}>
                                     <HeaderEmailInput onChange={this._onChange}/>
                                 </form>
                             </div>
@@ -28,5 +28,9 @@ define([
         _onChange: function(/*String*/text) {
             AppActions.searchPerson(text);
         },
+
+        _onSubmitListener: function (e) {
+            e.preventDefault();
+        }
     });
 });
