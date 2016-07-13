@@ -196,7 +196,7 @@ define([
 
         if (currentSchedule) {
             schedule = currentSchedule.set('going', schedule.going)
-                .set('guests', i++);
+                .set('guests', schedule.guests);
         } else {
             schedule.date.setHours(0,0,0,0);
         }

@@ -58,23 +58,22 @@ define([
                 domain = email.replace(/^.+?@/, '@')
             }
 
-            var touchSeeMore = (this.props.person.schedule.size > 1),
-                TouchErrorIcon = '';
+            var touchSeeMore = (this.props.person.schedule.size > 1 || this.props.person.schedule.size == 1 &&
+                this.props.person.schedule.first().status == SavedStatusEntity.STATUS_ERROR);
 
             if (this.state.savedStatus && this.state.savedStatus.status) {
                 switch (this.state.savedStatus.status) {
                     case SavedStatusEntity.STATUS_SUCCESS:
-                        this.state.savedStatus = (<div className="text-xs-center">{__("Schedule Saved.")}</div>);
+                        this.state.savedStatus = (<div className="alert alert-success text-xs-center">{__("Schedule Saved.")}</div>);
                         break;
                     case SavedStatusEntity.STATUS_ERROR:
-                        this.state.savedStatus = (<div className="text-xs-center">{__("An error occurred")}</div>);
-                        TouchErrorIcon = 'ErrorIcon';
+                        this.state.savedStatus = (<div className="alert alert-danger text-xs-center">{__("An error occurred")}</div>);
                         break;
                     case SavedStatusEntity.STATUS_PENDING:
-                        this.state.savedStatus = (<div className="text-xs-center">{__("Pending")}</div>);
+                        this.state.savedStatus = (<div className="alert alert-warning text-xs-center">{__("Pending")}</div>);
                         break;
                     default:
-                        this.state.savedStatus = (<div className="text-xs-center">{__("Unknown error occurred")}</div>);
+                        this.state.savedStatus = (<div className="alert alert-danger text-xs-center">{__("Unknown error occurred")}</div>);
                 }
 
                 var me = this;
@@ -108,7 +107,7 @@ define([
                                 <hr/>
                                 <ScheduleSection schedule={this.props.person.schedule} first={true}/>
                                 <div className={"touch-smore text-xs-center " + touchSeeMore} onClick={this._onClickSeeMore}>
-                                    <b>{__('Touch see more')} {TouchErrorIcon}</b>
+                                    <b>{__('Touch see more')}</b>
                                 </div>
                             </div>
                             <div className="new-schedule text-xs-center">

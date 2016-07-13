@@ -4,11 +4,12 @@ define([
     '../actions/AppActions',
     './ScheduleSection',
     '../entity/ScheduleEntity',
+    '../entity/SavedStatusEntity',
     '../store/PersonStore',
     'immutable',
     //---
     './ScheduleModal.scss'
-], function (React, ModalStore, AppActions, ScheduleSection, ScheduleEntity, PersonStore, Immutable) {
+], function (React, ModalStore, AppActions, ScheduleSection, ScheduleEntity, SavedStatusEntity, PersonStore, Immutable) {
 
     function getStateStore() {
         return {
@@ -22,6 +23,12 @@ define([
 
         componentWillMount: function () {
             ModalStore.addChangeListener(this._changed);
+            PersonStore.addChangeListener(this._onPersonStoreChange);
+        },
+
+        componentWillUnmount: function () {
+            ModalStore.removeChangeListener(this._changed);
+            PersonStore.removeChangeListener(this._onPersonStoreChange);
         },
 
         getInitialState: function () {
@@ -105,10 +112,14 @@ define([
         },
 
         _onEditHandle: function (/*Schedule*/schedule) {
-            this.setState({
-                shownEdit: schedule,
-                currEditSchedule: schedule
-            });
+            if (schedule.status == SavedStatusEntity.STATUS_ERROR) {
+                AppActions.createPersonSchedule(this.state.person.email, schedule.going, schedule.guests, schedule.date);
+            } else {
+                this.setState({
+                    shownEdit: schedule,
+                    currEditSchedule: schedule
+                });
+            }
         },
 
         _onClickBack: function (e) {
@@ -155,6 +166,15 @@ define([
             this.setState({
                 shownEdit: newEdit
             });
+        },
+
+        _onPersonStoreChange: function () {
+            if (this.state.person.email) {
+                var person = PersonStore.getAll();
+                this.setState({
+                    person: person.get(this.state.person.email.toUpperCase())
+                });
+            }
         }
     })
 });
