@@ -45,8 +45,8 @@ define([
                 <div className="a-c-schedule-modal modal fade">
                     <div className="modal-dialog modal-lg">
                         <div className="modal-content">
-                            <div className="modal-header">
-                                <h4 className="modal-title">{this.state.person.email + ' ' + __("Schedules")}</h4>
+                            <div className="modal-header text-xs-center">
+                                <h4 className="modal-title">{this.state.person.email + ' ' + __("Calendar")}</h4>
                             </div>
                             <div className="modal-body">
                                 <div className={"item-content " + (this.state.shownEdit ? 'shown-edit' : '')}>

@@ -19,15 +19,26 @@
     opacity: 0;
     transition: opacity .3s ease-in-out;
     visibility: hidden;
+    cursor: pointer;
 
     &.true
     {
       opacity: 1;
       visibility: visible;
     }
+
+    b
+    {
+      color: #adabab;
+
+      &:hover
+      {
+        color: #000
+      }
+    }
   }
 
-  
+
   .alert
   {
     position: absolute;
