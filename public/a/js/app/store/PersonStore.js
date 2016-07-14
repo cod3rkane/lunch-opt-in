@@ -248,8 +248,10 @@ define([
     }
 
     function _receiveItems(data) {
+        if (!data.length) return;
+
         for (var key in data) {
-            if (data.hasOwnProperty(key)) {
+            if (data.hasOwnProperty(key) && data[key].schedule) {
                 data[key].schedule.forEach(function (e) {
                     _createPersonSchedule(data[key].email, e.going, e.guests, new Date(e.date.date),
                         SavedStatusEntity.STATUS_SUCCESS);
