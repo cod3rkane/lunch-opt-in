@@ -34,6 +34,7 @@ define([
                             key={schedule.date.getTime()}
                             schedule={schedule}
                             onClickEdit={me.props.onClickEdit}
+                            fullWidth={(me.props.first)}
                         />
                     );
                 }
@@ -44,7 +45,7 @@ define([
             }
 
             return (
-                <div className="a-c-schedule-section">
+                <div className="a-c-schedule-section list-group">
                     {listItems}
                 </div>
             );
