@@ -9,10 +9,16 @@
     {
       overflow: hidden;
       width: 200%;
+      max-height: 50vh;
       display: inline-flex;
 
       .item
       {
+        &:first-child
+        {
+          overflow-y: scroll;
+        }
+
         display: inline-block;
         vertical-align: top;
         width: 100%;
