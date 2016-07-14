@@ -18,7 +18,7 @@ define([
             return (
                 <div className="a-c-home-page">
                     <Header />
-                    <div className="container-fluid">
+                    <div className="container-fluid content_--_">
                         <List />
                     </div>
                 </div>
