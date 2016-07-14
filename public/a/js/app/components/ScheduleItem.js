@@ -57,7 +57,7 @@ define([
                         <div className="col-xs-12 text-xs-center">
                             <div>
                                 <b>
-                                    {gsDayNames[schedule.date.getDay()] + ' ' + schedule.date.getMonth()  + '/' + schedule.date.getDate()}
+                                    {gsDayNames[schedule.date.getDay()] + ' ' + (schedule.date.getMonth() + 1)  + '/' + schedule.date.getDate()}
                                 </b>
                             </div>
                             <span>{schedule.going ? ' going ' : ' not going '}</span>
