@@ -6,15 +6,14 @@ define([
 
     return React.createClass({
         displayName: 'HeaderEmailInput',
-        
+
         propTypes: {
-            onChange: React.PropTypes.func.isRequired,
-            value: React.PropTypes.string
+            onChange: React.PropTypes.func.isRequired
         },
 
         getInitialState: function() {
             return {
-                value: this.props.value || ''
+                value: ''
             };
         },
 
