@@ -77,8 +77,8 @@ define([
                                                     {(this.state.shownEdit && this.state.shownEdit.going ? __('Not coming') : __('coming'))}
                                                 </button>
                                                 <button
-                                                    className={"btn waves-effect waves-light " +
-                                                    (!this.state.shownEdit.going ? 'btn-danger' : 'btn-default')}
+                                                    className={"btn waves-effect waves-light btn-default"}
+                                                    disabled={(!this.state.shownEdit.going)}
                                                     onClick={this._onClickGuests}>
                                                     {__('Bringing guests')}
                                                 </button>

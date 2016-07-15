@@ -105,7 +105,7 @@ define([
                                     <small className="text-muted">{domain}</small>
                                 </h4>
                                 <hr/>
-                                <ScheduleSection schedule={this.props.person.schedule} first={true}/>
+                                <ScheduleSection schedule={this.props.person.schedule} first={true} onClickEdit={this._onClickSeeMore}/>
                                 <div className={"touch-smore text-xs-center " + touchSeeMore} onClick={this._onClickSeeMore}>
                                     <b>{__('Touch see more')}</b>
                                 </div>
