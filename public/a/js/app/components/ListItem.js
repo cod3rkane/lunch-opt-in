@@ -6,9 +6,10 @@ define([
     './ScheduleSection',
     '../store/PersonStore',
     '../entity/SavedStatusEntity',
+    '../util/CheckDate',
     //----
     './ListItem.scss'
-], function(React, Person, Schedule, Actions, ScheduleSection, PersonStore, SavedStatusEntity) {
+], function(React, Person, Schedule, Actions, ScheduleSection, PersonStore, SavedStatusEntity, CheckDate) {
 
     var defaultProps = new Person();
     return React.createClass({
@@ -189,6 +190,7 @@ define([
             var nextDate = new Date();
 
             nextDate.setDate(this.state.currDate.getDate() + 1);
+            nextDate = CheckDate.check(nextDate, CheckDate.TYPE_MORE);
 
             this.setState({
                 currDate: nextDate
@@ -198,6 +200,7 @@ define([
         _onClickLessOneDay: function (e) {
             var nextDate = new Date();
             nextDate.setDate(this.state.currDate.getDate() - 1);
+            nextDate = CheckDate.check(nextDate, CheckDate.TYPE_LESS);
 
             this.setState({
                 currDate: nextDate
