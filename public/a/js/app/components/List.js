@@ -59,8 +59,46 @@ define([
                 }, this);
             }
 
+            var personNum = Immutable.OrderedMap();
+            var guestsNum = 0;
+
+            this.state.people.valueSeq().sortBy(function (e) {
+                return e.schedule.date;
+            }).forEach(function (person) {
+                person.schedule.forEach(function (schedule) {
+                    if (schedule.date.getDate() == (new Date()).getDate()) {
+                        if (!schedule.going)
+                            personNum = personNum.set(person.email, person);
+                        if (schedule.going && schedule.guests > 0)
+                            guestsNum += parseInt(schedule.guests);
+                    }
+                })
+            });
+
+            var personStatus;
+            var guestsStatus;
+
+            if (personNum.size != guestsNum) {
+                var style;
+                if (guestsNum > 0) {
+                    style = {
+                        borderRight: '1px solid #d0d0d0',
+                        marginRight: '6px'
+                    };
+                    guestsStatus = (<span><b>{guestsNum + ' Guests Today'}</b></span>);
+                }
+
+                if (personNum.size > 0) {
+                    personStatus = (<span style={style}><b>{personNum.size + ' Not Coming '}</b></span>);
+                }
+            }
+
             return (
                 <div className="a-c-list_--_">
+                    <div className="text-xs-center">
+                        {personStatus}
+                        {guestsStatus}
+                    </div>
                     <div className="row">
                         <div className={"list-loading_--_ text-xs-center " + this.state.fetching_items}>
                             <img src={preloader} alt={__("Pacman Loading animation")}/>
