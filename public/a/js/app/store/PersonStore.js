@@ -286,6 +286,13 @@ define([
         return _savedStatusStack;
     }
 
+    function _changeSchedule(email, schedule) {
+        var person = _getPersonByEmail(email);
+        var Schedules = person.schedule.remove(schedule.date.getTime());
+        person = person.set('schedule', Schedules);
+        _personChange(person);
+    }
+
     var Store = assign({}, events.EventEmitter.prototype, {
         emitChange: function() {
             this.emit(CHANGE_EVENT);
@@ -453,6 +460,11 @@ define([
 
             case Constants.APP_RECEIVE_API_ERROR:
                 Store.emitReceiveItemsWithError();
+                break;
+
+            case Constants.APP_CHANGE_SCHEDULE:
+                _changeSchedule(payload.email, payload.schedule);
+                Store.emitChange();
                 break;
 
             default:

@@ -61,6 +61,18 @@ define([
             
             API.savePerson(person);
         },
+        
+        changeSchedule: function (email, schedule, newSchedule) {
+            API.removeSchedle(email, schedule);
+            this.createPersonSchedule(email, newSchedule.going, newSchedule.guests, newSchedule.date);
+            Dispatcher.dispatch({
+                actionType: Constants.APP_CHANGE_SCHEDULE,
+                payload: {
+                    email: email,
+                    schedule: schedule
+                },
+            });
+        },
 
         loadItems: function () {
             Dispatcher.dispatch({

@@ -13,5 +13,6 @@ define([
         APP_FETCHING_ITEMS: null,
         APP_RECEIVE_API_DATA: null,
         APP_RECEIVE_API_ERROR: null,
+        APP_CHANGE_SCHEDULE: null,
     });
 });

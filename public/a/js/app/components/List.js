@@ -46,7 +46,7 @@ define([
         render: function() {
             var listItems;
             if (this.state.people.size == 0 && !this.state.fetching_error) {
-                listItems = <div className="text-xs-center">{__("No item found")}</div>
+                listItems = <div className="text-xs-center">{__("Search your email.")}</div>
             } else {
                 listItems = this.state.people.valueSeq().map(function(/*../entity/Person*/person) {
                     return (

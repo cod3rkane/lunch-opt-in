@@ -157,12 +157,12 @@ define([
         },
 
         _onClickSave: function (e) {
-            AppActions.createPersonSchedule(this.state.person.email, this.state.shownEdit.going,
-                this.state.shownEdit.guests, this.state.shownEdit.date);
+            AppActions.changeSchedule(this.state.person.email, this.state.currEditSchedule, this.state.shownEdit);
         },
 
         _onDatePicker: function (e) {
-            var newEdit = this.state.shownEdit.set('date', new Date(e.target.value));
+            var dateStr = e.target.value.split('-');
+            var newEdit = this.state.shownEdit.set('date', new Date(dateStr[1] + '-' + dateStr[2] + '-' + dateStr[0]));
             this.setState({
                 shownEdit: newEdit
             });

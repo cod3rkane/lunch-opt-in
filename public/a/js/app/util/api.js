@@ -54,6 +54,20 @@ define([
         createPerson: function (email, going, guests, date) {
             var person = PersonStore.newPersonWithSchedule(email, going, guests, date);
             this.savePerson(person);
+        },
+
+        removeSchedle: function (email, schedule) {
+            _post('/delete.php', {
+                person: email,
+                schedule: JSON.stringify(schedule)
+            }, function (status) {
+                console.log("Remove Schedule");
+                console.log(status);
+            }, function (error) {
+                console.info('Remove Schedule Error');
+                console.log(error);
+                ServerActions.savedPersonError(email, schedule, SavedStatusEntity.STATUS_ERROR);
+            });
         }
     }
 });
