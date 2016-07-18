@@ -112,6 +112,14 @@ define([
         },
 
         _onEditHandle: function (/*Schedule*/schedule) {
+            var now = new Date();
+            now.setHours(0,0,0,0);
+
+            if (schedule.date.getDate() == now.getDate()) {
+                alert(__("You don't cannot edit the date for today"));
+                return;
+            }
+
             if (schedule.status == SavedStatusEntity.STATUS_ERROR) {
                 AppActions.createPersonSchedule(this.state.person.email, schedule.going, schedule.guests, schedule.date);
             } else {
