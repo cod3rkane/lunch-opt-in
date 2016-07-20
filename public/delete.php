@@ -23,12 +23,28 @@ if (!$response) {
     try {
         $person = $store->byEmail($_POST['person']);
         $data = json_decode($_POST['schedule']);
-        $schedule = new \Sta\SnackOptIn\Entity\Schedule();
-        $schedule->setDate(new DateTime($data->date));
-        $schedule->setGoing($data->going);
-        $schedule->setGuests((int)($data->guests > 0 ? $data->guests : 0));
 
-        $person->removeSchedule($schedule);
+        /**
+         * @param $str
+         * @return DateTime
+         */
+        function strToDate($str) {
+            $dateStr = explode('-', substr($str, 0, 10));
+            $date = new DateTime();
+            $date->setTimezone(new DateTimeZone('America/Sao_Paulo'))
+                ->setDate($dateStr[0], $dateStr[1], $dateStr[2])
+                ->setTime(0,0,0);
+            return $date;
+        }
+
+        $date = strToDate($data->date);
+
+        $mySchedules = $person->getSchedule();
+        foreach ($mySchedules as $item) {
+            if ($item->getDate()->setTimezone(new DateTimeZone('America/Sao_Paulo'))->setTime(0,0,0) == $date) {
+                $person->removeSchedule($item);
+            }
+        }
 
         $store->addItem($person);
 

@@ -23,19 +23,32 @@ if (!$response) {
 
         $data = json_decode($_POST['schedule']);
 
+        /**
+         * @param $str
+         * @return DateTime
+         */
+        function strToDate($str) {
+            $dateStr = explode('-', substr($str, 0, 10));
+            $date = new DateTime();
+            $date->setTimezone(new DateTimeZone('America/Sao_Paulo'))
+                ->setDate($dateStr[0], $dateStr[1], $dateStr[2])
+                ->setTime(0,0,0);
+            return $date;
+        }
+
         if (!array_key_exists('date', (array) $data)) {
             foreach ($data as $item) {
                 $Schedule = new \Sta\SnackOptIn\Entity\Schedule();
-                $Schedule->setDate(new DateTime($item->date));
-                $Schedule->setGoing($item->going);
-                $Schedule->setGuests((int)($item->guests > 0 ? $item->guests : 0));
+                $Schedule->setDate(strToDate($item->date))
+                         ->setGoing($item->going)
+                         ->setGuests((int)($item->guests > 0 ? $item->guests : 0));
                 $Person->addSchedule($Schedule);
             }
         } else {
             $schedule = new \Sta\SnackOptIn\Entity\Schedule();
-            $schedule->setDate(new DateTime($data->date));
-            $schedule->setGuests($data->guests);
-            $schedule->setGoing($data->going);
+            $schedule->setDate(strToDate($data->date))
+                     ->setGuests($data->guests)
+                     ->setGoing($data->going);
             $Person->addSchedule($schedule);
         }
 
