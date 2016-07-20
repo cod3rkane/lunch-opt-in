@@ -1,0 +1,429 @@
+[Fri Jul 15 15:41:43.068706 2016] [:error] [pid 13027] [client 127.0.0.1:39846] PHP Fatal error:  Uncaught exception 'Sta\\SnackOptIn\\Exception\\Exception' with message 'There is no JS file for the layer 'main'.' in /var/www/Projects/lunch-opt-in/src/SnackOptIn/View/Helper/GetAssetFileName.php:28\nStack trace:\n#0 /var/www/Projects/lunch-opt-in/src/SnackOptIn/View/Helper/GetAssetFileName.php(25): Sta\\SnackOptIn\\View\\Helper\\GetAssetFileName->getLayerFileName('main', 'en', NULL)\n#1 /var/www/Projects/lunch-opt-in/public/index.php(78): Sta\\SnackOptIn\\View\\Helper\\GetAssetFileName->getLayerFileName('main', 'en', 'en')\n#2 {main}\n  thrown in /var/www/Projects/lunch-opt-in/src/SnackOptIn/View/Helper/GetAssetFileName.php on line 28
+[Mon Jul 18 15:43:19.707226 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:19.707315 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:19.707347 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:24.402675 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:24.402946 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:24.403101 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:24.939342 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:24.939425 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:24.939467 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:26.069199 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:26.069300 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:26.069354 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:26.723673 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:26.723754 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:26.723786 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.252175 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.252258 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.252296 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.762419 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.762486 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.762513 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.763449 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/public/GetItems.php:20) in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 39, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.763478 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.763505 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:27.763527 2016] [:error] [pid 7061] [client 127.0.0.1:35218] PHP   2. header(*uninitialized*) /var/www/Projects/lunch-opt-in/public/GetItems.php:39, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:35.441215 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:35.441288 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:35.441315 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.085082 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.085198 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.085249 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.242629 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.242693 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.242715 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.397070 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.397109 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.397122 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.558764 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.558814 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.558830 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.713520 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.713561 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.713575 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.897674 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Notice:  Object of class DateTime could not be converted to int in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 20, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.897728 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.897741 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.898507 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/public/GetItems.php:20) in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 39, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.898529 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP Stack trace:, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.898541 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Mon Jul 18 15:43:36.898549 2016] [:error] [pid 12707] [client 127.0.0.1:35232] PHP   2. header(*uninitialized*) /var/www/Projects/lunch-opt-in/public/GetItems.php:39, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.557957 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.574121 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.574169 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.574190 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575745 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575794 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575810 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575822 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575833 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575915 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575951 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575965 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575976 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.575985 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.577564 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.577593 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.577609 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.577619 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.962887 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.962931 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.962946 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.962957 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.963727 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.963760 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.963774 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.971548 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.971585 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.971599 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.971610 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972543 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972571 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972583 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972609 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972621 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972676 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972688 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972699 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972709 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.972719 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.974301 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.974336 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.974356 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:56.974367 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.412948 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.412986 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.413000 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.413011 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.413773 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.413862 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.413909 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.418504 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.418533 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.418545 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.418567 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.419583 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.419676 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.419716 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.419751 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.419786 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.419876 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.419939 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.421716 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.421757 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.421770 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.423261 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.423296 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.423313 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.423325 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.612621 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.612652 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.612664 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.612675 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.613299 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.613323 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.613345 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.618860 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.618934 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.618953 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.618965 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619707 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619730 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619737 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619745 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619751 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619789 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619795 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619802 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619808 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.619814 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.620915 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.620968 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.620982 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.620992 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.794888 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.794930 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.794955 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.794966 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.795663 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.795740 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.795775 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.797499 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.797539 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.797553 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.797564 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798638 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798679 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798692 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798702 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798711 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798766 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798780 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798790 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798801 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.798815 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.800329 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.800394 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.800432 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.800476 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.984526 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.984558 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.984572 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.984583 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.985295 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.985319 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.985328 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.989812 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.989853 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.989869 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.989885 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991201 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991231 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991242 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991253 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991264 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991331 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991347 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991357 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991383 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.991395 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.993063 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.993094 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.993108 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:57.993118 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.184632 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.184666 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.184679 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.184691 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.185179 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.185201 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.185212 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.191044 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.191089 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.191106 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.191119 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192063 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192092 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192105 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192117 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192145 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192203 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192217 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192228 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192237 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.192247 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.193487 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.193509 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.193523 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.193536 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.395414 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.395448 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.395462 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.395475 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.396172 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.396215 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.396231 2016] [:error] [pid 23997] [client 127.0.0.1:57854] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.396998 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.397047 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.397065 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.397077 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.398099 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.398182 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.398219 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.398254 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.398289 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.398374 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.398409 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.400110 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.400152 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.400163 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.401722 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.401773 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.401810 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.401845 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.478377 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.478496 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.478530 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.478544 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.479544 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.479585 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.479600 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.487790 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.487823 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.487836 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.487848 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489168 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489202 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489215 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489227 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489238 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489296 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489309 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489320 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489331 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.489341 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.491253 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.491317 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.491353 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.491386 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.618876 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.618918 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.618935 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.618959 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/delete.php:24, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.619736 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Fatal error:  Call to a member function removeSchedule() on null in /var/www/Projects/lunch-opt-in/public/delete.php on line 31, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.619764 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.619776 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/delete.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.626783 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.626817 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.626833 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.626845 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628344 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628409 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628430 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628446 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628460 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628558 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628584 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628596 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628606 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.628617 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.630373 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.630399 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.630414 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:44:58.630432 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.155303 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.155346 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.155363 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.155377 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156487 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156519 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156533 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156546 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156558 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156618 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156665 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156704 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156743 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.156779 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.158395 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.158449 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.158493 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:02.158528 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.045282 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.045446 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.045551 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.045623 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.047504 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.047617 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.047683 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.047750 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.047814 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.047975 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.048044 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.048103 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.048165 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.048227 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.050743 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.050824 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.050888 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.050970 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.417682 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.417851 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.417974 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.418063 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.420296 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.420456 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.420538 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.420619 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.420700 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.420871 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.420962 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.421035 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.421106 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.421177 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.424046 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.424137 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.424209 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.424281 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.599047 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.599089 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.599105 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.599116 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600245 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600283 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600297 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600309 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600334 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600392 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600406 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600416 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600427 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.600441 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.601810 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.601834 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.601849 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.601858 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.769633 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.769674 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.769689 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.769700 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770741 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770775 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770786 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770797 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770807 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770863 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770873 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770894 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770922 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.770933 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.772277 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.772309 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.772326 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.772337 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.968701 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.968729 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.968741 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.968751 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969657 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969690 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969702 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969713 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969722 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969774 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969788 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969798 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969809 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.969821 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.971111 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.971159 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.971193 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:03.971223 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.357839 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.358032 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.358118 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.358185 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/public/save.php:19, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360107 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 51, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360237 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360305 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360374 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360436 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. Sta\\SnackOptIn\\Store->byEmail() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:99, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360590 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  array_push() expects parameter 1 to be array, boolean given in /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php on line 100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360654 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360714 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360773 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. Sta\\SnackOptIn\\Store->addItem() /var/www/Projects/lunch-opt-in/public/save.php:42, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.360830 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   3. array_push() /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.363414 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/Projects/lunch-opt-in/src/SnackOptIn/Store.php:100) in /var/www/Projects/lunch-opt-in/public/save.php on line 49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.363506 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.363575 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/save.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:04.363652 2016] [:error] [pid 3929] [client 127.0.0.1:57852] PHP   2. header() /var/www/Projects/lunch-opt-in/public/save.php:49, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:54.973682 2016] [:error] [pid 23348] [client 127.0.0.1:57864] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 15, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:54.973787 2016] [:error] [pid 23348] [client 127.0.0.1:57864] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:54.973830 2016] [:error] [pid 23348] [client 127.0.0.1:57864] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:58.397140 2016] [:error] [pid 4013] [client 127.0.0.1:57858] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 15, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:58.397241 2016] [:error] [pid 4013] [client 127.0.0.1:57858] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:45:58.397261 2016] [:error] [pid 4013] [client 127.0.0.1:57858] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/
+[Wed Jul 20 10:46:03.335692 2016] [:error] [pid 4013] [client 127.0.0.1:57858] PHP Warning:  Invalid argument supplied for foreach() in /var/www/Projects/lunch-opt-in/public/GetItems.php on line 15, referer: http://lunch.project.lc/
+[Wed Jul 20 10:46:03.335745 2016] [:error] [pid 4013] [client 127.0.0.1:57858] PHP Stack trace:, referer: http://lunch.project.lc/
+[Wed Jul 20 10:46:03.335761 2016] [:error] [pid 4013] [client 127.0.0.1:57858] PHP   1. {main}() /var/www/Projects/lunch-opt-in/public/GetItems.php:0, referer: http://lunch.project.lc/

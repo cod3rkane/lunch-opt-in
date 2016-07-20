@@ -1,54 +1,52 @@
-define([
-    'react',
-    '../entity/ScheduleEntity',
-    './ScheduleItem',
-    'immutable',
-    //----
-    './ScheduleSection.scss'
-], function(React, Schedule, ScheduleItem, Immutable) {
+import React from 'react';
+import Schedule from '../entity/ScheduleEntity';
+import ScheduleItem from './ScheduleItem';
+import Immutable from 'immutable';
+//----
+require('./ScheduleSection.scss');
 
-    var defaultProps = {
-        schedule: Immutable.List([])
-    };
-    
-    return React.createClass({
-        propTypes: {
-            schedule: React.PropTypes.instanceOf(Immutable.List([])),
-            first: React.PropTypes.bool,
-            onClickEdit: React.PropTypes.func
-        },
+class ScheduleSection extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-        getDefaultProps: function() {
-            return defaultProps;
-        },
-
-        render: function() {
-            /* we are getting the smallest date in iterator */
-            var me = this;
-            var listItems = this.props.schedule.valueSeq().sortBy(function (x) {
-                return x.date;
-            }).map(
-                function(/*../entity/Schedule*/schedule) {
-                    return (
-                        <ScheduleItem
-                            key={schedule.date.getTime()}
-                            schedule={schedule}
-                            onClickEdit={me.props.onClickEdit}
-                            fullWidth={(me.props.first)}
-                        />
-                    );
-                }
-            );
-
-            if (this.props.first) {
-                listItems = listItems.first();
+    render() {
+        /* we are getting the smallest date in iterator */
+        var me = this;
+        var listItems = this.props.schedule.valueSeq().sortBy(x => x.date).map(
+            /*../entity/Schedule*/schedule => {
+                return (
+                    <ScheduleItem
+                        key={schedule.date.getTime()}
+                        schedule={schedule}
+                        onClickEdit={me.props.onClickEdit.bind(this)}
+                        fullWidth={(me.props.first)}
+                    />
+                );
             }
+        );
 
-            return (
-                <div className="a-c-schedule-section list-group">
-                    {listItems}
-                </div>
-            );
-        },
-    });
-});
+        if (this.props.first) {
+            listItems = listItems.first();
+        }
+
+        return (
+            <div className="a-c-schedule-section list-group">
+                {listItems}
+            </div>
+        );
+    }
+}
+
+ScheduleSection.PropTypes = {
+    schedule: React.PropTypes.instanceOf(Immutable.List([])),
+    first: React.PropTypes.bool,
+    onClickEdit: React.PropTypes.func
+};
+
+ScheduleSection.defaultProps = {
+    schedule: Immutable.List([]),
+};
+
+
+export default ScheduleSection;

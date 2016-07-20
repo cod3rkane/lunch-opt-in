@@ -1,41 +1,42 @@
-define([
-    'react',
-    //----
-    './HeaderEmailInput.scss'
-], function(React) {
+import React from 'react';
+//-----
+require('./HeaderEmailInput.scss');
 
-    return React.createClass({
-        displayName: 'HeaderEmailInput',
+class HeaderEmailInput extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: ''
+        };
+        this.displayName = 'HeaderEmailInput';
+    }
 
-        propTypes: {
-            onChange: React.PropTypes.func.isRequired
-        },
+    render() {
+        return (
+            <div className="a-c-header-email-input">
+                <input
+                    className="form-control form-control-lg"
+                    type="email"
+                    placeholder={__('Type your email here')}
+                    onChange={this._onChange.bind(this)}
+                    value={this.state.value}
+                />
+            </div>
+        );
+    }
 
-        getInitialState: function() {
-            return {
-                value: ''
-            };
-        },
+    //==== Private Methods ====//
 
-        render: function() {
-            return (
-                <div className="a-c-header-email-input">
-                    <input
-                        className="form-control form-control-lg"
-                        type="email"
-                        placeholder={__('Type your email here')}
-                        onChange={this._onChange}
-                        value={this.state.value}
-                    />
-                </div>
-            );
-        },
+    _onChange(/*object*/event) {
+        this.setState({
+            value: event.target.value,
+        });
+        this.props.onChange(event.target.value.trim());
+    }
+}
 
-        _onChange: function(/*object*/event) {
-            this.setState({
-                value: event.target.value,
-            });
-            this.props.onChange(event.target.value.trim());
-        }
-    });
-});
+HeaderEmailInput.propTypes = {
+    onChange: React.PropTypes.func.isRequired
+};
+
+export default HeaderEmailInput;

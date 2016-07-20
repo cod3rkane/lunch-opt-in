@@ -91,23 +91,24 @@ var config = Object.keys(languages).map(function(language) {
                 //}
             ],
             loaders: [
+                // {
+                //     test: /\.js/,
+                //     // Enable caching for improved performance during development
+                //     // It uses default OS directory by default. If you need something
+                //     // more custom, pass a path to it. I.e., babel?cacheDirectory=<path>
+                //     loaders: ['babel?cacheDirectory'],
+                //     // Parse only app files! Without this it will go through entire project.
+                //     // In addition to being slow, that will most likely result in an error.
+                //     include: entryPath
+                // },
                 {
-                    test: /\.js/,
-                    // Enable caching for improved performance during development
-                    // It uses default OS directory by default. If you need something
-                    // more custom, pass a path to it. I.e., babel?cacheDirectory=<path>
-                    loaders: ['babel?cacheDirectory'],
-                    // Parse only app files! Without this it will go through entire project.
-                    // In addition to being slow, that will most likely result in an error.
-                    include: entryPath
+                   test: /\.js$/,
+                   loader: 'babel-loader',
+                    exclude: /node_modules/,
+                   query: {
+                       presets: ['es2015', 'react'],
+                   }
                 },
-                //{
-                //    test: /\.js$/,
-                //    loader: 'babel-loader',
-                //    query: {
-                //        presets: ['react'],
-                //    }
-                //},
                 {
                     test: /\.scss/,
                     //loader: ExtractPlugin.extract('style', 'css!sass'),

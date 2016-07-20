@@ -1,28 +1,31 @@
-define([
-    'react',
-    './Header',
-    './List',
-    '../actions/AppActions',
-    //----
-    './HomePage.scss'
-], function(React, Header, List, AppActions) {
+import React from 'react';
+import Header from './Header';
+import List from './List';
+import AppActions from '../actions/AppActions';
+//-----
+require('./HomePage.scss');
 
-    return React.createClass({
-        displayName: 'HomePage',
+class HomePage extends React.Component {
 
-        componentDidMount: function() {
-            AppActions.loadItems();
-        },
+    constructor() {
+        super();
+        this.displayName = 'HomePage';
+    }
 
-        render: function() {
-            return (
-                <div className="a-c-home-page">
-                    <Header />
-                    <div className="container-fluid content_--_">
-                        <List />
-                    </div>
+    componentDidMount() {
+        AppActions.loadItems();
+    }
+
+    render() {
+        return (
+            <div className="a-c-home-page">
+                <Header />
+                <div className="container-fluid content_--_">
+                    <List/>
                 </div>
-            );
-        }
-    });
-});
+            </div>
+        );
+    }
+}
+
+export default HomePage;

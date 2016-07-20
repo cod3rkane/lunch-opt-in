@@ -37,23 +37,21 @@ observer.observe(target, config);
 //     }
 //     return oldRenderValidatedComponent.apply(this, arguments);
 // }
-require([
-    'react',
-    'react-dom',
-    'get-env',
-    './components/HomePage'
-], function(React, ReactDOM, env, HomePage) {
 
-    window.React = React; // export for http://fb.me/react-devtools
-    
-    if (env() == 'dev') {
-        require('promise/lib/rejection-tracking').enable(
-            {allRejections: true}
-        );
-    }
+import React from 'react';
+import ReactDOM from 'react-dom';
+import env from 'get-env';
+import HomePage from './components/HomePage';
 
-    ReactDOM.render(
-        <HomePage />,
-        document.getElementById('page')
+window.React = React; // export for http://fb.me/react-devtools
+
+if (env() == 'dev') {
+    require('promise/lib/rejection-tracking').enable(
+        {allRejections: true}
     );
-});
+}
+
+ReactDOM.render(
+    <HomePage />,
+    document.getElementById('page')
+);

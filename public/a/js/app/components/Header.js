@@ -1,36 +1,41 @@
-define([
-    'react',
-    './HeaderEmailInput',
-    '../actions/AppActions',
-    //----
-    './Header.scss'
-], function(React, HeaderEmailInput, AppActions) {
+import React from 'react';
+import HeaderEmailInput from './HeaderEmailInput';
+import AppActions from '../actions/AppActions';
+//-----
+require('./Header.scss');
 
-    return React.createClass({
-        displayName: 'Header',
-        
-        render: function() {
-            return (
-                <div className="a-c-showheader">
-                    <nav className="navbar navbar-dark bg-primary">
-                        <div className="container-fluid">
-                            <div className="col-xs-12">
-                                <form className="form-inline" onSubmit={this._onSubmitListener}>
-                                    <HeaderEmailInput onChange={this._onChange}/>
-                                </form>
-                            </div>
+class Header extends React.Component {
+
+    constructor() {
+        super();
+        this.displayName = 'Header';
+    }
+
+    render() {
+        return (
+            <div className="a-c-showheader">
+                <nav className="navbar navbar-dark bg-primary">
+                    <div className="container-fluid">
+                        <div className="col-xs-12">
+                            <form className="form-inline" onSubmit={this._onSubmitListener}>
+                                <HeaderEmailInput onChange={this._onChange}/>
+                            </form>
                         </div>
-                    </nav>
-                </div>
-            );
-        },
+                    </div>
+                </nav>
+            </div>
+        );
+    }
 
-        _onChange: function(/*String*/text) {
-            AppActions.searchPerson(text);
-        },
+    //==== Private Methods ====//
 
-        _onSubmitListener: function (e) {
-            e.preventDefault();
-        }
-    });
-});
+    _onChange(/*String*/text) {
+        AppActions.searchPerson(text);
+    }
+
+    _onSubmitListener(e) {
+        e.preventDefault();
+    }
+}
+
+export default Header;
